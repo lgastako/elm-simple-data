@@ -4,9 +4,13 @@
     "repository": "https://github.com/eeue56/elm-simple-data.git",
     "license": "BSD3",
     "source-directories": [
-        "."
+        "src"
     ],
-    "exposed-modules": [],
+    "exposed-modules": [
+        "Convert", 
+        "Convert.Date", 
+        "Convert.String"
+    ],
     "dependencies": {
         "elm-lang/core": "2.1.0 <= v < 3.0.0"
     },
