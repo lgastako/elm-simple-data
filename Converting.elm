@@ -1,15 +1,33 @@
-module Converting where
+module Converting (default, attemptStringToInt, attemptDateFromString) where
 
-import String exposing (toInt)
+import String
+import Date exposing (Date)
 
 import Result exposing (Result(..))
+
+
+{- 
+    Try to use converter to convert a value and
+    return the converted value. If an err happens,
+    instead return a given default value
+-}
+default : (b -> Result String a) -> a -> b -> a
+default converter defaultValue newValue =
+  case converter newValue of
+    Ok x -> x
+    Err _ -> defaultValue
 
 {-
   Try to convert a string to a number, given a default value
   Default to the value if it failed to convert
 -}
-attemptToInt : Int -> String -> Int
-attemptToInt old newNumber = 
-  case toInt newNumber of
-    Ok x -> x
-    Err _ -> old
+attemptStringToInt : Int -> String -> Int
+attemptStringToInt old newNumber = default String.toInt old newNumber
+
+
+{-
+  Try to convert a string to a date, given a default value
+  Default to the value if it failed to convert
+-}
+attemptDateFromString : Date -> String -> Date
+attemptDateFromString old new = default Date.fromString old new
