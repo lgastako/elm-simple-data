@@ -18,11 +18,18 @@ default converter defaultValue newValue =
     Err _ -> defaultValue
 
 {-
-  Try to convert a string to a number, given a default value
+  Try to convert a string to an int, given a default value
   Default to the value if it failed to convert
 -}
 attemptStringToInt : Int -> String -> Int
 attemptStringToInt old newNumber = default String.toInt old newNumber
+
+{-
+  Try to convert a string to a float, given a default value
+  Default to the value if it failed to convert
+-}
+attemptStringToFloat : Float -> String -> Float
+attemptStringToFloat old newNumber = default String.toInt old newNumber
 
 
 {-
