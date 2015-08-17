@@ -1,4 +1,9 @@
-module Converting (default, attemptStringToInt, attemptDateFromString) where
+module Converting (default,
+
+    attemptStringToInt, 
+    attemptStringToFloat, 
+
+    attemptDateFromString) where
 
 import String
 import Date exposing (Date)
@@ -29,7 +34,7 @@ attemptStringToInt old newNumber = default String.toInt old newNumber
   Default to the value if it failed to convert
 -}
 attemptStringToFloat : Float -> String -> Float
-attemptStringToFloat old newNumber = default String.toInt old newNumber
+attemptStringToFloat old newNumber = default String.toFloat old newNumber
 
 
 {-
