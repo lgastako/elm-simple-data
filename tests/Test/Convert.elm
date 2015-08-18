@@ -9,6 +9,6 @@ import ElmTest.Test exposing (..)
 
 tests : Test 
 tests = 
-  suite "Default" 
-    [ test "Successful convert" <| assertEqual 5 (default (\x -> Ok x) 4 5)
-    , test "Unsuccesful convert" <| assertEqual 4 (default (\x -> Err "") 4 5)]
+  suite "defaultResult" 
+    [ test "Successful convert" <| assertEqual 5 (defaultResult (\x -> Ok x) 4 5)
+    , test "Unsuccesful convert" <| assertEqual 4 (defaultResult (\x -> Err "") 4 5)]

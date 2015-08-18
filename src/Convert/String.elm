@@ -4,7 +4,7 @@ module Convert.String where
 @docs attemptToInt, attemptToFloat
 -}
 
-import Convert exposing (default)
+import Convert exposing (defaultResult)
 
 import String
 
@@ -13,11 +13,11 @@ import String
   Default to the value if it failed to convert
 -}
 attemptToInt : Int -> String -> Int
-attemptToInt old newNumber = default String.toInt old newNumber
+attemptToInt old newNumber = defaultResult String.toInt old newNumber
 
 {-|
   Try to convert a string to a float, given a default value
   Default to the value if it failed to convert
 -}
 attemptToFloat : Float -> String -> Float
-attemptToFloat old newNumber = default String.toFloat old newNumber
+attemptToFloat old newNumber = defaultResult String.toFloat old newNumber

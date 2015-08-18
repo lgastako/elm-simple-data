@@ -4,7 +4,7 @@ module Convert.Date where
 @docs attemptFromString
 -}
 
-import Convert exposing (default)
+import Convert exposing (defaultResult)
 
 import Date exposing (Date)
 
@@ -13,4 +13,4 @@ import Date exposing (Date)
   Default to the value if it failed to convert
 -}
 attemptFromString : Date -> String -> Date
-attemptFromString old new = default Date.fromString old new
+attemptFromString old new = defaultResult Date.fromString old new
