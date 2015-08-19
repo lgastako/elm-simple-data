@@ -13,4 +13,4 @@ import Date exposing (Date)
   Default to the value if it failed to convert
 -}
 attemptFromString : Date -> String -> Date
-attemptFromString old new = defaultResult Date.fromString old new
+attemptFromString defaultDate new = defaultResult Date.fromString defaultDate new

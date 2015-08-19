@@ -13,11 +13,11 @@ import String
   Default to the value if it failed to convert
 -}
 attemptToInt : Int -> String -> Int
-attemptToInt old newNumber = defaultResult String.toInt old newNumber
+attemptToInt defaultNumber newNumber = defaultResult String.toInt defaultNumber newNumber
 
 {-|
   Try to convert a string to a float, given a default value
   Default to the value if it failed to convert
 -}
 attemptToFloat : Float -> String -> Float
-attemptToFloat old newNumber = defaultResult String.toFloat old newNumber
+attemptToFloat defaultNumber newNumber = defaultResult String.toFloat defaultNumber newNumber

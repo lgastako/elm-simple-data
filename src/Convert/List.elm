@@ -1,7 +1,7 @@
 module Convert.List where
 {-| Convert wrappers for list 
 
-@docs attemptFromString
+@docs attemptTail, attemptHead
 -}
 
 import Convert exposing (defaultMaybe)
@@ -9,15 +9,13 @@ import Convert exposing (defaultMaybe)
 import List exposing (head, tail)
 
 {-|
-  Try to convert a string to a date, given a default value
-  Default to the value if it failed to convert
+  Try to return the tail of a list, returning default value if failed
 -}
-attemptTail : List -> String -> List
-attemptTail list defaultList = defaultMaybe tail list defaultList
+attemptTail : List a -> List a -> List a
+attemptTail defaultList list  = defaultMaybe tail defaultList list
 
 {-|
-  Try to convert a string to a date, given a default value
-  Default to the value if it failed to convert
+  Try to return the head of a list, returning default value if failed
 -}
-attemptHead : List -> String -> List
-attemptHead list defaultList = defaultMaybe head list defaultList
+attemptHead : a -> List a -> a
+attemptHead defaultItem list  = defaultMaybe head defaultItem list

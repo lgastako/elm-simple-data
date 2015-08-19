@@ -1,6 +1,6 @@
 {
     "version": "1.0.0",
-    "summary": "A collection of methods for dealing with data and simplifying converting between types",
+    "summary": "A collection of methods for simplifying data and converting between types",
     "repository": "https://github.com/eeue56/elm-simple-data.git",
     "license": "BSD3",
     "source-directories": [
