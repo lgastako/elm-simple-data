@@ -1,6 +1,6 @@
 {
     "version": "1.0.0",
-    "summary": "A collection of methods for dealing with data and simplifying converting",
+    "summary": "A collection of methods for dealing with data and simplifying converting between types",
     "repository": "https://github.com/eeue56/elm-simple-data.git",
     "license": "BSD3",
     "source-directories": [
@@ -9,7 +9,8 @@
     "exposed-modules": [
         "Convert", 
         "Convert.Date", 
-        "Convert.String"
+        "Convert.String",
+        "Convert.List"
     ],
     "dependencies": {
         "elm-lang/core": "2.1.0 <= v < 3.0.0"
