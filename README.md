@@ -14,7 +14,7 @@ type Number = Hour Int
 hoursView : Signal.Address Update -> Html.Html
 hoursView address = 
   numberSelectView 
-    [on "input" targetValue (Signal.message address << AlarmTime << Hour << String.attemptToInt)] 
+    [on "input" targetValue (Signal.message address << AlarmTime << Hour << String.attemptToInt 0)] 
     0
     23
 ```
