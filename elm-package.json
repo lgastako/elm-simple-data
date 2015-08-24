@@ -11,7 +11,8 @@
         "Convert.Date",
         "Convert.String",
         "Convert.List",
-        "Convert.Color"
+        "Convert.Color",
+        "Convert.Array"
     ],
     "dependencies": {
         "elm-lang/core": "2.1.0 <= v < 3.0.0"
