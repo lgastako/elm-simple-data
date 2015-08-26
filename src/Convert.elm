@@ -36,7 +36,7 @@ defaultActionResult converter defaultCallback newValue =
 -}
 defaultResult : (b -> Result String a) -> a -> b -> a
 defaultResult converter defaultValue newValue = 
-    defaultActionResult converter defaultValue (\_ -> newValue)
+    defaultActionResult converter (\_ -> defaultValue) newValue 
 
 {-| 
     Try to use converter to convert a value and
