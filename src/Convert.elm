@@ -41,7 +41,20 @@ defaultResult converter defaultValue newValue =
 {-| 
     Try to use converter to convert a value and
     return the converted value. If nothing happens,
-    instead return a given default value
+    instead return a given default value.
+
+    For example, if you have a function which returns
+    a Maybe where you don't care if a failure happens,
+    you just want it to work. 
+
+    firstPrime primes = defaultMaybe (List.head) 2 primes
+
+    instead of 
+
+    firstPrime primes = 
+      case List.head of 
+        Just x -> x
+        Nothing -> 2
 -}
 defaultMaybe : (b -> Maybe a) -> a -> b -> a
 defaultMaybe converter defaultValue newValue =
