@@ -24,10 +24,10 @@ import Maybe exposing (Maybe(..))
     instead pass the message to the given function
 -}
 defaultActionResult : (b -> Result String a) -> (String -> a) -> b -> a
-defaultActionResult converter defaultValue newValue =
+defaultActionResult converter defaultCallback newValue =
   case converter newValue of
     Ok x -> x
-    Err message -> defaultValue
+    Err message -> defaultCallback message
 
 {-| 
     Try to use converter to convert a value and
