@@ -9,11 +9,6 @@ Currently provides a way of working between lists and arrays in a neater fasion.
 
 import Array
 
-nestedFromList : Int -> List a -> Array a
-nestedFromList layers nestedList =
-  if layers < 1 then Array.fromList nestedList else
-    nestedFromList <| List.map (Array.fromList) nestedList
-
 {-|
   Convert a list of lists into an array of arrays
 -}
