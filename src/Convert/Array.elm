@@ -7,7 +7,7 @@ Currently provides a way of working between lists and arrays in a neater fasion.
 @docs nested2FromList
 -}
 
-import Array
+import Array exposing (Array)
 
 {-|
   Convert a list of lists into an array of arrays
