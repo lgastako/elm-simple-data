@@ -1,5 +1,5 @@
 # elm-simple-data
-A collection of methods for dealing with data and simplifying converting between differnet types.
+A collection of methods for dealing with data and simplifying converting between different types.
 
 At the moment Convert provides ways of attempting to convert data, with some default to return if it fails.
 
